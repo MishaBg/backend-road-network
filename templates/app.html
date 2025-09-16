@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Корзина</title>
+    <link rel="stylesheet" href="/static/styles/cart.css">
+</head>
+<body>
+<header>
+    <h1>
+        <a href="/main"><img src="http://127.0.0.1:9000/web/image.png" alt="home"></a>
+    </h1>
+</header>
+
+<h2>Расчет стоимости строительства дорожной сети</h2>
+
+<h2>Всего городов: {{ .count }}</h2>   
+
+
+
+<div class="cards">
+    {{ range .requestCites }}
+    <div class="card">
+        <div class="card-left">
+            <img src="{{ .Image}}" alt="product">
+        </div>
+        <div class="card-right">
+            <h3>
+                <span class="card-title">{{ .Title }}</span>
+                <span class="card-value">Координаты: {{ .Coordinates }}</span>
+                
+                <div class="card-controls">
+                            <!-- <button class="delete-btn">
+                                Удалить
+                            </button> -->
+                            <div class="cable-length-container">
+                                <div class="cable-input-group">
+                                    <input type="number" id="cable-length" class="cable-input" placeholder="Введите км" min="1">
+                                    <span class="cable-unit"></span>
+                                </div>
+                                <!-- <button class="calculate-btn">Рассчитать</button> -->
+                            </div>
+                </div>
+
+            </h3>
+        </div>
+    </div>
+    {{ end }}
+</div>
+</body>
+</html>
