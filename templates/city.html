@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Metoda - Подробно</title>
+    <link rel="stylesheet" href="/static/styles/order_style.css">
+</head>
+<body>
+<header>
+    <h1>
+        <a href="/main"><img src="http://127.0.0.1:9000/web/image.png" alt="home"></a>
+    </h1>
+</header>
+
+<h3>Координаты города</h3>
+
+<div class="card">
+    <div class="card-left">
+        <img src="{{ .city.Image}}" alt="product">
+    </div>
+    <div class="card-right">
+        <h3>{{ .city.Title }}</h3>
+        <h3>Координаты: {{ .city.Coordinates }}</h3>
+        
+    </div>
+</div>
+
+</body>
+</html>
