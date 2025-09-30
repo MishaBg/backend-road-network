@@ -1,0 +1,78 @@
+body {
+    margin: 0; 
+}
+header {
+    background-color: #0c73fe; /* светло-голубой */
+    padding: 10px 20px;
+    height: 60px; 
+    display: flex;
+    align-items: center;
+}
+header img { /*задаем размер картинки*/
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+
+h3 {
+    text-align: center;   /* по центру */
+    font-size: 40px;      /* размер */
+    color: #000;       /* цвет */
+    margin: 30px 0;       /* отступы сверху и снизу */
+    font-weight: normal;  /* можно убрать жирность, если нужно */
+}
+
+
+
+.card {
+    display: flex;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    min-height: 150px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card-left {
+    flex: 0 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.card-left img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-left:10px;
+    object-fit: contain;
+}
+
+.card-right {
+    
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-right h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #707070;
+}
